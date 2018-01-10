@@ -5,4 +5,9 @@ const ACCESS_TOKEN = 'bf3327a40c12d6c9026ec22d3db944b9962a1a18acdda7182ffb9eef5a
 
 const BASE_URL = '';
 
-export { ACCESS_TOKEN, BASE_URL };
+const BREAKPOINTS = {
+  desktop: 1200,
+  tablet: 600,
+};
+
+export { ACCESS_TOKEN, BASE_URL, BREAKPOINTS };

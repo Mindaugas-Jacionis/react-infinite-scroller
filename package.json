@@ -5,7 +5,7 @@
   "proxy": "http://api.dribbble.com",
   "dependencies": {
     "classnames": "^2.2.5",
-    "normalize.css": "^7.0.0",
+    "font-awesome": "^4.7.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

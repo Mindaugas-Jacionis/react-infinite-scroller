@@ -25,13 +25,12 @@ function json(response) {
 }
 
 function request(context, base, { api, types, ...rest }, next) {
-  const accessToken = context.getState().login.token;
   const [REQUEST, SUCCESS, FAILURE] = types;
 
   next({ ...rest, type: REQUEST });
 
   const process = (url, params = {}) => {
-    const newApi = new Api({ api: base, accessToken });
+    const newApi = new Api({ api: base });
     let operation = null;
 
     switch (params.method) {

@@ -4,7 +4,7 @@ import * as types from './actionTypes';
 const initialState = Immutable({
   fetching: false,
   errorMessage: false,
-  shots: {},
+  shots: [],
   page: 0,
 });
 
