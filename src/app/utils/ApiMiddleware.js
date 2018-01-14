@@ -73,7 +73,7 @@ function request(context, base, { api, types, ...rest }, next) {
   return api(process);
 }
 
-export default function apiMiddleware(url) {
+export default function apiMiddleware(url = '') {
   return context => next => action =>
     isRequest(action) ? request(context, url, action, next) : next(action);
 }

@@ -22,6 +22,7 @@ export default function login(state = initialState, action = {}) {
         title: item.title,
         url: item.html_url,
         img: item.images.teaser,
+        author: item.user.name,
       }));
 
       return Object.assign({}, state, {

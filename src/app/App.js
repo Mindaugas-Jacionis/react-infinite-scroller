@@ -7,12 +7,12 @@ import thunk from 'redux-thunk';
 import { ThemeProvider } from 'styled-components';
 import { getTheme } from './styles';
 import { Spinner } from './components';
-import { BASE_URL } from '../Constants';
 import Routes from './Routes';
 import { ApiMiddleware } from './utils';
 import reducers from './redux';
+import { API_BASE_URL } from '../Constants';
 
-const middlewares = [thunk, ApiMiddleware(BASE_URL)];
+const middlewares = [thunk, ApiMiddleware(API_BASE_URL)];
 const store = compose(applyMiddleware(...middlewares))(createStore)(reducers);
 const persistor = persistStore(store);
 
