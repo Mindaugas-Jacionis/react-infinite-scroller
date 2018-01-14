@@ -15,13 +15,10 @@ function status(response) {
 }
 
 function json(response) {
-  // eslint-disable-next-line
-  return response.json().then(data => {
-    return {
-      data,
-      status: response.status,
-    };
-  });
+  return response.json().then(data => ({
+    data,
+    status: response.status,
+  }));
 }
 
 function request(context, base, { api, types, ...rest }, next) {

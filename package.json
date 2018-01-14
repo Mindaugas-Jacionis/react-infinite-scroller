@@ -2,7 +2,12 @@
   "name": "react-infinite-scroller",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://api.dribbble.com",
+  "proxy": {
+    "/shots": {
+      "target": "http://api.dribbble.com/v1",
+      "changeOrigin": true
+    }
+  },
   "dependencies": {
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",

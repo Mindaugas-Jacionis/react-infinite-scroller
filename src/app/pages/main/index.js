@@ -46,13 +46,9 @@ class MainPage extends React.Component {
 
   renderImageList() {
     const { shots } = this.props;
-    const Images = shots.map(item => <ImageCard data={item} />);
+    const images = shots.map(item => <ImageCard {...item} key={item.id} />);
 
-    return (
-      <div>
-        <Images />
-      </div>
-    );
+    return <div>{images}</div>;
   }
 
   render() {
@@ -63,7 +59,7 @@ class MainPage extends React.Component {
           this.refContainer = ref;
         }}
       >
-        {shots.length && this.renderImageList()}
+        {shots.length > 0 && this.renderImageList()}
         <div
           ref={ref => {
             this.refBottom = ref;

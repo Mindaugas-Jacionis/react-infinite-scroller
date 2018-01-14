@@ -5,7 +5,7 @@ import main from './main/reducer';
 const config = {
   key: 'root',
   storage,
-  whitelist: ['main'],
+  whitelist: [],
 };
 
 export default persistCombineReducers(config, { main });
