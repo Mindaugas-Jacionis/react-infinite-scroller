@@ -13,6 +13,22 @@ const Container = styled.div`
   padding: 1rem 0;
 `;
 
+const ImagesContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media (${props => props.theme.breakpoints.tablet}) {
+    width: 85%;
+  }
+
+  @media (${props => props.theme.breakpoints.desktop}) {
+    width: 70%;
+  }
+`;
+
 class MainPage extends React.Component {
   componentDidMount() {
     this.refContainer.addEventListener('scroll', this.load);
@@ -48,7 +64,7 @@ class MainPage extends React.Component {
     const { shots } = this.props;
     const images = shots.map(item => <ImageCard {...item} key={item.id} />);
 
-    return <div>{images}</div>;
+    return <ImagesContainer>{images}</ImagesContainer>;
   }
 
   render() {
